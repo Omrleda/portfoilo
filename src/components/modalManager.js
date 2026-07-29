@@ -42,7 +42,7 @@ export function initModalManager() {
         </p>
 
         <div style="max-height: 70vh; overflow-y: auto; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
-          <img src="/assets/certificate.jpg" alt="German Certificate B2.2 - Hussein Mohamed Hassan" style="width: 100%; display: block;" />
+          <img src="./assets/certificate.jpg" alt="German Certificate B2.2 - Hussein Mohamed Hassan" style="width: 100%; display: block;" />
         </div>
 
         <div style="display: flex; gap: 1rem; justify-content: center;">
