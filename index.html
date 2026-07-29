@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hussein Mohamed Hassan | Professional English & German Translator</title>
+  <meta name="description" content="Portfolio of Hussein Mohamed Hassan - Senior Al-Alsun Cairo University student, MENA News Agency trained translator, German B2.2 certified." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="dark-theme">
+  <!-- Top Announcement / Verification Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="badge-iso"><i class="fa-solid fa-graduation-cap"></i> 4th Year Senior @ Faculty of Al-Alsun (Cairo University)</span>
+        <span class="badge-bdue"><i class="fa-solid fa-newspaper"></i> Trained @ Middle East News Agency (MENA)</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="contact-quick"><i class="fa-solid fa-envelope"></i> hussein.m.hassan@alsun.cu.edu.eg</span>
+        <div class="lang-switch-wrapper">
+          <button id="lang-switch-btn" class="lang-btn" title="Switch Language">
+            <span class="lang-flag" id="current-lang-flag">🇬🇧</span>
+            <span id="current-lang-code">EN</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div class="lang-dropdown hidden" id="lang-dropdown">
+            <button class="lang-opt active" data-lang="en">🇬🇧 English</button>
+            <button class="lang-opt" data-lang="de">🇩🇪 Deutsch</button>
+            <button class="lang-opt" data-lang="ar">🇪🇬 العربية</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="main-header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-icon"><i class="fa-solid fa-language"></i></span>
+        <div class="logo-text">
+          <span class="brand-name">Hussein Mohamed Hassan</span>
+          <span class="brand-subtitle" data-i18n="nav.subtitle">English & German Translator | Al-Alsun (Cairo Univ.)</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link" data-i18n="nav.about">About Me</a>
+        <a href="#education" class="nav-link" data-i18n="nav.education">Education & Internships</a>
+        <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
+        <a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Sample Work</a>
+        <a href="#calculator" class="nav-link" data-i18n="nav.calculator">Quote Calculator</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Light/Dark Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <a href="#contact" class="btn btn-accent btn-sm" data-i18n="hero.ctaQuote">Get a Quote</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="tag-pulse"></span>
+          <span data-i18n="hero.tagline">English ⟷ German ⟷ Arabic Translation</span>
+        </div>
+        
+        <h1 class="hero-title" data-i18n="hero.title">
+          Bridging Languages, Connecting Cultures: Professional Translation Services
+        </h1>
+        
+        <p class="hero-subtitle" data-i18n="hero.description">
+          Senior Al-Alsun student (English Department, Cairo University) with professional news translation training at Middle East News Agency (MENA) & Certified German B2.2 (Sehr Gut).
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#calculator" class="btn btn-primary btn-lg" id="hero-quote-btn">
+            <i class="fa-solid fa-calculator"></i> <span data-i18n="hero.ctaQuote">Instant Quote & Hire</span>
+          </a>
+          <button class="btn btn-outline btn-lg" id="download-cv-btn">
+            <i class="fa-solid fa-file-pdf"></i> <span data-i18n="hero.ctaCV">Download CV</span>
+          </button>
+        </div>
+
+        <div class="hero-badges">
+          <div class="badge-item">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Faculty of Al-Alsun 4th Year</span>
+          </div>
+          <div class="badge-item">
+            <i class="fa-solid fa-newspaper"></i>
+            <span>MENA News Agency Alum</span>
+          </div>
+          <div class="badge-item">
+            <i class="fa-solid fa-award"></i>
+            <span>German B2.2 (Sehr Gut)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Interactive Translation Demo Box -->
+      <div class="hero-interactive">
+        <div class="translation-card glass-panel">
+          <div class="card-header">
+            <div class="header-left">
+              <span class="card-title"><i class="fa-solid fa-bolt text-accent"></i> Live Translation Preview</span>
+            </div>
+            <div class="direction-pills">
+              <button class="dir-pill active" id="dir-en-de">EN ➔ DE</button>
+              <button class="dir-pill" id="dir-de-en">DE ➔ EN</button>
+            </div>
+          </div>
+
+          <div class="domain-tabs" id="hero-domain-tabs">
+            <button class="domain-tab active" data-domain="journalistic">Media & News</button>
+            <button class="domain-tab" data-domain="legal">Legal & Commercial</button>
+            <button class="domain-tab" data-domain="literary">Literary & Editorial</button>
+          </div>
+
+          <div class="translation-split">
+            <div class="split-pane source-pane">
+              <div class="pane-header">
+                <span class="pane-lang" id="hero-source-lang">English Source</span>
+                <button class="copy-btn" id="copy-source-btn" title="Copy Source Text"><i class="fa-regular fa-copy"></i></button>
+              </div>
+              <p class="pane-text" id="hero-source-text">Loading sample source text...</p>
+            </div>
+
+            <div class="split-pane-divider">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </div>
+
+            <div class="split-pane target-pane">
+              <div class="pane-header">
+                <span class="pane-lang" id="hero-target-lang">German Translation</span>
+                <span class="badge-human"><i class="fa-solid fa-user-check"></i> Human Expert</span>
+              </div>
+              <p class="pane-text" id="hero-target-text">Loading sample translation...</p>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="linguistic-note">
+              <i class="fa-solid fa-lightbulb text-gold"></i>
+              <span id="hero-nuance-note">Linguistic Nuance: Exact press agency terminology applied.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Banner -->
+  <section class="stats-banner">
+    <div class="container stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">4th</div>
+        <div class="stat-label">Senior Year @ Al-Alsun Cairo University</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">B2.2</div>
+        <div class="stat-label">German Certificate (Sehr Gut)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">MENA</div>
+        <div class="stat-label">News Agency Media Internship</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Accuracy & Deadline Commitment</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="section about-section" id="about">
+    <div class="container grid-2-col align-center">
+      <div class="about-image-wrapper">
+        <div class="image-frame">
+          <img src="/assets/hussein-portrait.jpg" alt="Hussein Mohamed Hassan" class="profile-img" />
+          <div class="frame-backdrop"></div>
+        </div>
+        <div class="experience-badge">
+          <span class="exp-years">B2.2</span>
+          <span class="exp-text">Certified German (Sehr Gut)</span>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="section-tag" data-i18n="about.tag">About Hussein Mohamed Hassan</div>
+        <h2 class="section-title" data-i18n="about.title">Linguistic Rigor & News Translation Excellence</h2>
+        
+        <p class="about-bio" data-i18n="about.bio1">
+          I am <strong>Hussein Mohamed Hassan</strong>, a senior (4th year) translation student at the prestigious <strong>Faculty of Al-Alsun (English Department), Cairo University</strong>. My academic training combines deep linguistic theory with practical translation across English, German, and Arabic.
+        </p>
+
+        <p class="about-bio" data-i18n="about.bio2">
+          Having completed an intensive professional translation internship at the <strong>Middle East News Agency (MENA)</strong>, I have honed the ability to translate fast-paced news wires, political reports, and commercial documents under strict press deadlines.
+        </p>
+
+        <div class="about-tabs-container">
+          <div class="about-tabs-header">
+            <button class="about-tab-btn active" data-tab="qualifications">Education & Training</button>
+            <button class="about-tab-btn" data-tab="certificate">German Certificate</button>
+            <button class="about-tab-btn" data-tab="skills">Core Skills</button>
+          </div>
+
+          <div class="about-tab-content active" id="tab-qualifications">
+            <ul class="credentials-list">
+              <li><i class="fa-solid fa-building-columns text-accent"></i> <strong>Faculty of Al-Alsun, Cairo University</strong> – 4th Year Senior (English Dept)</li>
+              <li><i class="fa-solid fa-newspaper text-accent"></i> <strong>Middle East News Agency (MENA)</strong> – News & Political Translation Training</li>
+              <li><i class="fa-solid fa-award text-accent"></i> <strong>Lernquader Nachhilfe Kairo</strong> – German B2.2 Course (*Sehr Gut*)</li>
+            </ul>
+          </div>
+
+          <div class="about-tab-content" id="tab-certificate">
+            <div class="cert-preview-card">
+              <p><strong>Deutschen Sprachkurse für Ausländer (B2.2)</strong></p>
+              <p class="text-sm text-muted mb-2">Issued: Dec 1, 2025 | Overall Rating: <strong>Sehr Gut (Very Good)</strong></p>
+              <button class="btn btn-outline btn-sm" id="view-cert-modal-btn">
+                <i class="fa-solid fa-expand"></i> View Official Certificate Document
+              </button>
+            </div>
+          </div>
+
+          <div class="about-tab-content" id="tab-skills">
+            <div class="workflow-steps">
+              <div class="w-step"><span class="w-num">1</span> Press & Media Wire Translation</div>
+              <div class="w-step"><span class="w-num">2</span> English ⟷ German ⟷ Arabic</div>
+              <div class="w-step"><span class="w-num">3</span> Technical & Legal Localization</div>
+              <div class="w-step"><span class="w-num">4</span> Stylistic Proofreading & Editing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Internships Highlight Section -->
+  <section class="section education-section" id="education" style="background: var(--bg-secondary); border-y: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Academic & Practical Foundation</div>
+        <h2 class="section-title">Education & Professional Internships</h2>
+      </div>
+
+      <div class="grid-2-col">
+        <!-- Education Card -->
+        <div class="glass-panel" style="padding: 2rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div style="width: 50px; height: 50px; background: var(--accent-gold-light); color: var(--accent-gold); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.25rem;">Cairo University</h3>
+              <p class="text-accent" style="font-weight: 600;">Faculty of Al-Alsun – English Department</p>
+            </div>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Currently in senior year (4th year), specializing in advanced English literature, linguistics, simultaneous interpretation, and translation methodologies between English, Arabic, and German.
+          </p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+            <li><i class="fa-solid fa-check text-accent"></i> Specialized Translation across Legal, Political & Literary fields</li>
+            <li><i class="fa-solid fa-check text-accent"></i> Contrastive Grammar & Comparative Linguistics</li>
+          </ul>
+        </div>
+
+        <!-- MENA Internship Card -->
+        <div class="glass-panel" style="padding: 2rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div style="width: 50px; height: 50px; background: var(--accent-teal-light); color: var(--accent-teal); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+              <i class="fa-solid fa-newspaper"></i>
+            </div>
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.25rem;">Middle East News Agency (MENA)</h3>
+              <p class="text-accent" style="font-weight: 600;">Media & News Translation Trainee</p>
+            </div>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Completed rigorous hands-on news translation training at Egypt's premier official press agency. Translated daily international wire bulletins, economic reports, and diplomatic statements.
+          </p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+            <li><i class="fa-solid fa-check text-accent"></i> High-speed press wire translation under tight deadlines</li>
+            <li><i class="fa-solid fa-check text-accent"></i> Accuracy in political terminology and diplomatic style</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate Gallery Showcase -->
+  <section class="section cert-gallery-section" id="certificate">
+    <div class="container text-center">
+      <div class="section-tag">Verified Qualification</div>
+      <h2 class="section-title">Official German B2.2 Certificate</h2>
+      <p class="section-description">
+        Issued by <strong>Lernquader Nachhilfe Kairo</strong> after rigorous assessment with top evaluation (*Sehr Gut*) across all language modules.
+      </p>
+
+      <div class="glass-panel" style="max-width: 720px; margin: 0 auto; padding: 1.5rem; text-align: left; display: grid; grid-template-columns: 220px 1fr; gap: 1.5rem; align-items: center;">
+        <div style="position: relative; cursor: pointer;" id="cert-img-thumb">
+          <img src="/assets/certificate.jpg" alt="German B2.2 Certificate - Hussein Mohamed Hassan" style="width: 100%; height: 180px; object-fit: cover; object-position: top center; border-radius: 8px; border: 1px solid var(--accent-gold); box-shadow: 0 4px 12px rgba(0,0,0,0.3);" />
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; opacity: 0; transition: opacity 0.2s;" class="cert-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus text-2xl"></i>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.5rem;">Teilnahmebestätigung B2.2</h3>
+          <p style="color: var(--accent-gold); font-weight: 700; margin-bottom: 0.5rem;">Grade: Sehr Gut (Very Good)</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            <span>Aussprache: <strong>17 / 20</strong></span>
+            <span>Grammatik: <strong>17 / 20</strong></span>
+            <span>Wortschatz: <strong>19 / 20</strong></span>
+            <span>Redeübungen: <strong>18 / 20</strong></span>
+            <span>Schriftlich: <strong>17 / 20</strong></span>
+          </div>
+          <button class="btn btn-primary btn-sm" id="btn-open-cert-modal">
+            <i class="fa-solid fa-expand"></i> Inspect Full Document
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Specializations -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Areas of Expertise</div>
+        <h2 class="section-title">Translation & Editorial Solutions</h2>
+        <p class="section-description">
+          High-accuracy translation services between English, German, and Arabic.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card glass-panel" data-service-id="journalistic">
+          <div class="service-icon"><div style="display: flex;"><i class="fa-solid fa-newspaper"></i></div></div>
+          <h3 class="service-title">Media & Press Wire Translation</h3>
+          <p class="service-text">
+            News bulletins, press releases, political reporting, and international affairs content translated with press agency precision (MENA standard).
+          </p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check text-accent"></i> Press Wire & Political Reports</li>
+            <li><i class="fa-solid fa-check text-accent"></i> Media Articles & Editorial Copy</li>
+            <li><i class="fa-solid fa-check text-accent"></i> Rapid Deadline Turnaround</li>
+          </ul>
+          <button class="service-action-btn" data-modal="journalistic">Explore Details ➔</button>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card glass-panel" data-service-id="literary">
+          <div class="service-icon"><i class="fa-solid fa-book-open"></i></div>
+          <h3 class="service-title">Literary & Academic Translation</h3>
+          <p class="service-text">
+            Academic papers, research essays, fiction excerpts, and cultural texts rendered with stylistic fidelity and deep linguistic grounding.
+          </p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check text-accent"></i> Academic Research Papers</li>
+            <li><i class="fa-solid fa-check text-accent"></i> Prose & Cultural Essays</li>
+            <li><i class="fa-solid fa-check text-accent"></i> Al-Alsun Academic Standard</li>
+          </ul>
+          <button class="service-action-btn" data-modal="literary">Explore Details ➔</button>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card glass-panel" data-service-id="legal">
+          <div class="service-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3 class="service-title">Legal & Commercial Translation</h3>
+          <p class="service-text">
+            Business contracts, corporate correspondence, official certificates, and commercial proposals translated with precise terminology.
+          </p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check text-accent"></i> Business Contracts & Agreements</li>
+            <li><i class="fa-solid fa-check text-accent"></i> Official Certificates & Documents</li>
+            <li><i class="fa-solid fa-check text-accent"></i> Corporate Correspondence</li>
+          </ul>
+          <button class="service-action-btn" data-modal="legal">Explore Details ➔</button>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="service-card glass-panel" data-service-id="localization">
+          <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3 class="service-title">Localization & Proofreading</h3>
+          <p class="service-text">
+            Proofreading, editing, and localizing website copy, articles, and software copy into natural Arabic, English, or German.
+          </p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check text-accent"></i> Native Proofreading & Editing</li>
+            <li><i class="fa-solid fa-check text-accent"></i> Web Copy & Content Localization</li>
+            <li><i class="fa-solid fa-check text-accent"></i> Terminology Verification</li>
+          </ul>
+          <button class="service-action-btn" data-modal="localization">Explore Details ➔</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Sample Work -->
+  <section class="section portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Portfolio & Samples</div>
+        <h2 class="section-title">Side-by-Side Translation Comparison</h2>
+        <p class="section-description">
+          Examine real translation samples demonstrating terminology precision and journalistic clarity.
+        </p>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="portfolio-filter-bar" id="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="journalistic">Media & News Wire</button>
+        <button class="filter-btn" data-filter="legal">Legal & Commercial</button>
+        <button class="filter-btn" data-filter="literary">Literary & Academic</button>
+      </div>
+
+      <!-- Sample Items Display -->
+      <div class="portfolio-grid" id="portfolio-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Instant Quote Calculator Section -->
+  <section class="section calculator-section" id="calculator">
+    <div class="container">
+      <div class="calculator-card glass-panel">
+        <div class="calc-header text-center">
+          <div class="section-tag">Transparent Estimator</div>
+          <h2 class="section-title">Calculate Your Translation Estimate</h2>
+          <p class="calc-sub">Select your project parameters to receive an instant price estimate.</p>
+        </div>
+
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <div class="form-group">
+              <label><i class="fa-solid fa-arrow-right-arrow-left"></i> Language Pair & Direction</label>
+              <select id="calc-direction" class="form-control">
+                <option value="en-de">English ➔ German</option>
+                <option value="de-en">German ➔ English</option>
+                <option value="en-ar">English ➔ Arabic</option>
+                <option value="de-ar">German ➔ Arabic</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label><i class="fa-solid fa-layer-group"></i> Service Category</label>
+              <select id="calc-service" class="form-control">
+                <option value="general">Media & Press Translation ($0.08/word)</option>
+                <option value="legal">Legal & Commercial ($0.10/word)</option>
+                <option value="literary">Literary & Academic ($0.09/word)</option>
+                <option value="proofreading">Proofreading / Editing ($0.04/word)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label><i class="fa-solid fa-tachograph-digital"></i> Turnaround Time</label>
+              <select id="calc-urgency" class="form-control">
+                <option value="standard">Standard (2–3 Days)</option>
+                <option value="express">Express (24 Hours + 25%)</option>
+                <option value="rush">Urgent Same Day (12 Hours + 50%)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <div class="label-with-val">
+                <label><i class="fa-solid fa-font"></i> Word Count</label>
+                <span class="word-count-badge" id="word-count-val">1,500 Words</span>
+              </div>
+              <input type="range" id="calc-words-slider" min="100" max="15000" step="100" value="1500" class="form-slider" />
+              <input type="number" id="calc-words-input" min="100" max="50000" value="1500" class="form-control mt-2" placeholder="Or enter exact word count" />
+            </div>
+          </div>
+
+          <div class="calc-output glass-panel">
+            <div class="output-header">
+              <h3><i class="fa-solid fa-receipt"></i> Estimated Total</h3>
+              <span class="iso-indicator">MENA & Al-Alsun Standard</span>
+            </div>
+
+            <div class="price-display">
+              <span class="currency">$</span>
+              <span class="price-amount" id="calculated-price">120</span>
+              <span class="vat-note">*USD / EUR equivalent</span>
+            </div>
+
+            <div class="calc-summary-details">
+              <div class="summary-row">
+                <span>Estimated Delivery:</span>
+                <strong id="estimated-date">Aug 1, 2026</strong>
+              </div>
+              <div class="summary-row">
+                <span>Per-Word Rate:</span>
+                <strong id="per-word-rate">$0.08 / word</strong>
+              </div>
+              <div class="summary-row">
+                <span>Proofreading Included:</span>
+                <strong class="text-accent">Yes (Full Review)</strong>
+              </div>
+            </div>
+
+            <button class="btn btn-accent btn-block" id="calc-book-btn">
+              <i class="fa-solid fa-paper-plane"></i> Proceed to Book This Rate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Direct Inquiry Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container grid-2-col">
+      <div class="contact-info-col">
+        <div class="section-tag">Get in Touch</div>
+        <h2 class="section-title">Contact Hussein Mohamed Hassan</h2>
+        <p class="contact-sub">
+          Available for freelance translation projects, press wire localization, academic papers, and corporate inquiries.
+        </p>
+
+        <div class="contact-channels">
+          <div class="channel-card">
+            <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="channel-info">
+              <span class="channel-label">Email Direct</span>
+              <a href="mailto:hussein.m.hassan@alsun.cu.edu.eg" class="channel-val">hussein.m.hassan@alsun.cu.edu.eg</a>
+            </div>
+          </div>
+
+          <div class="channel-card">
+            <div class="channel-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="channel-info">
+              <span class="channel-label">Affiliation</span>
+              <span class="channel-val">Faculty of Al-Alsun, Cairo University</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-networks">
+          <span class="network-title">Professional Links:</span>
+          <div class="network-links">
+            <a href="https://linkedin.com" target="_blank" class="network-btn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn Profile</a>
+            <a href="https://wa.me/201000000000" target="_blank" class="network-btn"><i class="fa-brands fa-whatsapp"></i> Direct WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-col">
+        <form class="contact-form glass-panel" id="main-contact-form">
+          <h3 class="form-title"><i class="fa-solid fa-paper-plane text-accent"></i> Send Project Inquiry</h3>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="e.g. Ahmed Mansour" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="e.g. ahmed@agency.com" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-service">Service Required</label>
+              <select id="contact-service" class="form-control">
+                <option value="journalistic">Media & Press Translation</option>
+                <option value="literary">Literary & Academic Translation</option>
+                <option value="legal">Legal & Commercial Translation</option>
+                <option value="localization">Localization & Proofreading</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-words">Estimated Word Count</label>
+              <input type="text" id="contact-words" class="form-control" placeholder="e.g. 1,500 words" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Project Details & Instructions *</label>
+            <textarea id="contact-message" class="form-control" rows="4" placeholder="Describe your document, target language, deadline, or specific instructions..." required></textarea>
+          </div>
+
+          <div class="form-group file-upload-group">
+            <label class="file-drop-zone" id="file-drop-zone">
+              <i class="fa-solid fa-cloud-arrow-up text-accent text-2xl"></i>
+              <span id="file-upload-text">Drag & drop document (PDF, DOCX, TXT) or click to browse</span>
+              <input type="file" id="contact-file" class="hidden-file-input" accept=".pdf,.docx,.doc,.txt" />
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-contact-btn">
+            <i class="fa-solid fa-paper-plane"></i> Send Inquiry Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo-text">
+          <span class="brand-name">Hussein Mohamed Hassan</span>
+          <span class="brand-subtitle">English & German Translator | Al-Alsun Cairo University</span>
+        </div>
+        <p class="footer-desc">
+          Professional translation between English, German, and Arabic. Specializing in news media, academic texts, and commercial documentation.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#education">Education & MENA</a></li>
+          <li><a href="#certificate">German B2.2 Certificate</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-certifications">
+        <h4>Accreditations</h4>
+        <div class="cert-badges">
+          <span class="cert-pill">Faculty of Al-Alsun Senior</span>
+          <span class="cert-pill">MENA News Agency Trainee</span>
+          <span class="cert-pill">German B2.2 Certified (Sehr Gut)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container flex-between">
+        <span>&copy; 2026 Hussein Mohamed Hassan. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Container for Certificate Viewer & Samples -->
+  <div class="modal-overlay hidden" id="global-modal">
+    <div class="modal-card glass-panel" id="modal-card-content">
+      <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      <div id="modal-inner-body">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
